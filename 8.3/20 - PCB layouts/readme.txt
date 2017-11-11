@@ -1,0 +1,3 @@
+You will need RoborRoom's Copper Connection software to read this file. This is free software available from robotroom.com
+
+EMW is not affiliated with RobotRoom in any way. They are just great guys who helped us leave the stronghold of ExpressPCB's draconian restrictions on Gerber file export... 

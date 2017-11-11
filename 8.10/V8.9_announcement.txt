@@ -1,0 +1,38 @@
+Hi All - 
+
+Great news - next revision of JuiceBox Open Source EVSE is here. All orders from tomorrow will be this new version 
+
+It is based on the new PCB version - V8.9 - and has a few nice additional features:
+
+1. All-Surface-Mount PCB. We have moved 95% of the parts to SMT. This means lighter and more reliable board (easier cable routing, higher EMI immunity, lower susceptibility to moisture, etc). This has also reduced our cost a bit which allowed us to add all these nice features below
+
+2. Perhaps the biggest one is Hardware GFCI protection. We have added an additional layer of GFCI protection on top of the interrupt-based software layer. Now, even if the main processor freezes, the GFCI trip will open the relay. The feature is implemented using a D-flop latch IC which will stay latched until reset by the MCU. This is an important safety improvement and is one of the steps we took towards UL certification 
+
+3. On-board temperature monitor. This will provide over-temperature protection in case unit overheats for any reason (placed in the direct sunlight, in the overcurrent event, etc)
+
+4. PCB heater. Yes, we have added a small 6-watt heating element to the bottom of the PCB. It would turn on below 0 degrees F and turn off once the processor core heats above that temperature. This will result in more reliable operation in extremely low temperatures (we did NOT receive any complaints from our customers in Canada / midwest even with a previous version so this is mostly a preventive measure)
+
+5. Good news for our kit builders - all WiFi communication components and WiFi module sockets are now pre-placed on the board. All you have to do now in order to add WiFi is insert the module into the PCB sockets and (optionally) solder on the WPS button
+
+6. A bit more technical change - we have moved to a zero-drift op-amp for GFCI / voltage measurement circuit. This allowed us to get rid of the vast majority of the false GFCI trips (a problem previously reported by ~3-4% of customers) and get rid of complex calibration process. 
+
+7. All resistive components have been replaced with 1% tolerance parts. This will means higher precision of the voltage and current measurements.
+
+8. Better placement / configuration of the pilot line connection 
+
+9. Pads for large cable terminals were added to the bottom of the board. This is the provision for future addition of laminated copper busbars to eliminate cable alignment issues (busbars are not quite ready yet but the board is ready for them as soon as we get them out).
+
+
+In addition to hardware-based changes, the following pure software changes were made in the latest V8.9.1 firmware:
+
+1. More consistent display states for states other than A and C (A and C were already well covered in the previous versions)
+
+2. More precise current measurement
+
+3. Immediate WiFi reporting on plug-in (so you don't have to wait 1-10 minutes to see the first data from your unit)
+
+
+As usual, all related design files can be downloaded from our JuiceBox folder at http://emotorwerks.com/JuiceBox_Public/. Everything should be there by now - the only thing we are missing is schematics which is being updated right now. 
+
+Thanks,
+Valery.

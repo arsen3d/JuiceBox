@@ -1,0 +1,154 @@
+BODY {
+	background-color: #FFFFFF;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+}
+
+h3 {
+	font-size: 10pt;
+}
+
+p {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+}
+
+a {
+	color: #000000;
+}
+
+.topside .buttons {
+	display: none;
+}
+
+.topside h1 {
+	display: none;
+}
+
+.rightside {
+	text-align: left;
+}
+
+.rightside a {
+	display: block;
+}
+
+.leftside {
+	text-align: left;
+}
+
+.leftside  table{
+	display: none;
+}
+
+.leftside h2 {
+	display: none;
+}
+
+.rightside h2 {
+	font-size: 10pt;
+}
+
+.inner {
+	text-align: left;
+	font-size: 8pt;
+}
+
+.inner h1 {
+	font-size: 12pt;
+	text-align: left;
+}
+
+.inner table {
+	border: 1px solid #000000;
+}
+
+.inner  p {
+	font-size: 8pt;
+}
+
+.inner .footer {
+	margin-top: 1em;
+}
+
+.inner .footer table {
+	display: none;
+}
+
+.continue a {
+	display: none;
+}
+
+.copyright {
+	text-align: left;
+}
+
+.listing {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+}
+
+.listing table {
+	border: 0px;
+	background-color: #FFFFFF;
+	font-size: 10px;
+}
+
+.listing h2 {
+	font-size: 16px;
+	text-align:center;
+}
+
+.listing h4 {
+	font-size: 10px;
+}
+
+.listing td, p  {
+	font-size: 10px;
+	text-align:left;
+}
+
+.copyright {
+	text-align:right;
+	padding: 10px 0 0 0;
+}
+
+.letterhead {
+	text-align:center;
+}
+
+.tips {
+	display: none;
+}
+
+.col1of3 h2 {
+	font-size: 10pt;
+}
+
+.col2of3 h2 {
+	font-size: 10pt;
+}
+
+.col3of3 h2 {
+	font-size: 10pt;
+}
+
+.col2of3 a {
+	display: block;
+}
+
+.col3of3 a {
+	display: block;
+}
+
+.col1of3 {
+	text-align: left;
+}
+
+.col2of3 {
+	text-align: left;
+}
+
+.col3of3 {
+	text-align: left;
+}

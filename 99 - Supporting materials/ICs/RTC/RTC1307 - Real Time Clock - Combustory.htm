@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<!-- saved from url=(0062)http://combustory.com/wiki/index.php/RTC1307_-_Real_Time_Clock -->
+<html lang="en" dir="ltr" class="client-chrome client-chrome-2 client-webkit client-win"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<title>RTC1307 - Real Time Clock - Combustory</title>
+<meta name="generator" content="MediaWiki 1.17.0">
+<link rel="shortcut icon" href="http://combustory.com/favicon.ico">
+<link rel="search" type="application/opensearchdescription+xml" href="http://combustory.com/wiki/opensearch_desc.php" title="Combustory (en)">
+<link rel="EditURI" type="application/rsd+xml" href="http://combustory.com/wiki/api.php?action=rsd">
+<link rel="alternate" type="application/atom+xml" title="Combustory Atom feed" href="http://combustory.com/wiki/index.php?title=Special:RecentChanges&feed=atom">
+<link rel="stylesheet" href="http://combustory.com/wiki/load.php?debug=false&lang=en&modules=mediawiki.legacy.commonPrint%2Cshared&only=styles&skin=monobook&*">
+<link rel="stylesheet" href="http://combustory.com/wiki/skins/monobook/main.css?301" media="screen">
+<!--[if lt IE 5.5000]><link rel="stylesheet" href="/wiki/skins/monobook/IE50Fixes.css?301" media="screen" /><![endif]-->
+<!--[if IE 5.5000]><link rel="stylesheet" href="/wiki/skins/monobook/IE55Fixes.css?301" media="screen" /><![endif]-->
+<!--[if IE 6]><link rel="stylesheet" href="/wiki/skins/monobook/IE60Fixes.css?301" media="screen" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="/wiki/skins/monobook/IE70Fixes.css?301" media="screen" /><![endif]--><meta name="ResourceLoaderDynamicStyles" content="">
+<style type="text/css">/*<![CDATA[*/
+.source-c {line-height: normal;}
+.source-c li {line-height: normal;}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for c
+ * CSS class: source-c, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.c.source-c .de1, .c.source-c .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;}
+.c.source-c  {font-family:monospace;}
+.c.source-c .imp {font-weight: bold; color: red;}
+.c.source-c li, .c.source-c .li1 {font-weight: normal; vertical-align:top;}
+.c.source-c .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.c.source-c .li2 {font-weight: bold; vertical-align:top;}
+.c.source-c .kw1 {color: #b1b100;}
+.c.source-c .kw2 {color: #000000; font-weight: bold;}
+.c.source-c .kw3 {color: #000066;}
+.c.source-c .kw4 {color: #993333;}
+.c.source-c .co1 {color: #666666; font-style: italic;}
+.c.source-c .co2 {color: #339933;}
+.c.source-c .coMULTI {color: #808080; font-style: italic;}
+.c.source-c .es0 {color: #000099; font-weight: bold;}
+.c.source-c .es1 {color: #000099; font-weight: bold;}
+.c.source-c .es2 {color: #660099; font-weight: bold;}
+.c.source-c .es3 {color: #660099; font-weight: bold;}
+.c.source-c .es4 {color: #660099; font-weight: bold;}
+.c.source-c .es5 {color: #006699; font-weight: bold;}
+.c.source-c .br0 {color: #009900;}
+.c.source-c .sy0 {color: #339933;}
+.c.source-c .st0 {color: #ff0000;}
+.c.source-c .nu0 {color: #0000dd;}
+.c.source-c .nu6 {color: #208080;}
+.c.source-c .nu8 {color: #208080;}
+.c.source-c .nu12 {color: #208080;}
+.c.source-c .nu16 {color:#800080;}
+.c.source-c .nu17 {color:#800080;}
+.c.source-c .nu18 {color:#800080;}
+.c.source-c .nu19 {color:#800080;}
+.c.source-c .me1 {color: #202020;}
+.c.source-c .me2 {color: #202020;}
+.c.source-c .ln-xtra, .c.source-c li.ln-xtra, .c.source-c div.ln-xtra {background-color: #ffc;}
+.c.source-c span.xtra { display:block; }
+
+/*]]>*/
+</style>
+<style type="text/css">/*<![CDATA[*/
+@import "http://emotorwerks.com/wiki/index.php?title=MediaWiki:Geshi.css&amp;usemsgcache=yes&amp;action=raw&amp;ctype=text/css&amp;smaxage=18000";
+/*]]>*/
+</style>		<link rel="alternate" type="application/rdf+xml" title="RTC1307 - Real Time Clock" href="http://combustory.com/wiki/index.php?title=Special:ExportRDF/RTC1307_-_Real_Time_Clock&xmlmime=rdf">
+<script type="text/javascript" src="http://emotorwerks.com/JuiceBox_Public/99%20-%20Supporting%20materials/ICs/RTC/RTC1307&#32;-&#32;Real&#32;Time&#32;Clock&#32;-&#32;Combustory_files/hover.js"></script><script type="text/javascript" src="http://emotorwerks.com/JuiceBox_Public/99%20-%20Supporting%20materials/ICs/RTC/RTC1307&#32;-&#32;Real&#32;Time&#32;Clock&#32;-&#32;Combustory_files/highlight.js"></script><style type="text/css">#yieldsquare-ad {
+  margin:10px auto 20px;
+
+  width: 728px;
+}
+
+#yieldsquare-about a {
+  cursor: pointer;
+}
+
+.yieldsquare-enabled {
+  border-radius:0 0 5px 5px;
+  box-shadow: inset 0 0 75px 75px lightgray, 0 0 0 lightgray;
+  -webkit-transition:opacity 1s linear;
+}
+
+.yieldsquare-disabled-first {
+  -webkit-box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.45);
+  -webkit-transition: opacity 1s linear;
+  background-image: url(http://s3.amazonaws.com/static.yieldsquare.com/ads-disabled/messagebed.gif);
+  height: 90px;
+  opacity: 1;
+  position: relative;
+  width: 728px;
+}
+
+.yieldsquare-disabled-second {
+  -webkit-transition: all 0.4s ease-in-out;
+  background-image: url(http://s3.amazonaws.com/static.yieldsquare.com/ads-disabled/messagebed.gif);
+  border-radius:0 0 5px 5px;
+  box-shadow: inset 0 0 35px 35px transparent, 0 0 75px 50px transparent;
+  height: 90px;
+  opacity: 0;
+  position: relative;
+  width: 728px;
+}
+
+#yieldsquare-about-ad {
+  font:11px arial !important;
+  color:#555;
+  padding: 4px;
+  text-align:center;
+}
+
+#yieldsquare-about-ad a {
+  cursor: pointer;
+  color: #333;
+}
+
+.yieldsquare-message-icon {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.yieldsquare-message-p {
+    font: 13px/17px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+    width: 542px;
+    height: 74px;
+    left: 123px;
+    position: absolute;
+    top: 0px;
+    color: #3d3d3d;
+    margin-top: 13px;
+    margin-bottom: 13px;
+}
+
+.yieldsquare-message-p span {
+    font: bold 16px/17px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+    color: #292929;
+}
+
+.yieldsquare-message-p a {
+    text-decoration: none;
+    color: #1d97cf;
+}
+
+.yieldsquare-message-p a:hover {
+    text-decoration: underline;
+}
+
+#yieldsquare-message-x {
+    position: absolute;
+    left: 715px;
+    top: 6px;
+}
+
+undefined</style></head>
+<body class="mediawiki ltr ns-0 ns-subject page-RTC1307_-_Real_Time_Clock skin-monobook">
+<div id="globalWrapper">
+<div id="column-content"><div id="content">
+	<a id="top"></a>
+	
+	<h1 id="firstHeading" class="firstHeading">RTC1307 - Real Time Clock</h1>
+	<div id="bodyContent">
+		<div id="siteSub">From Combustory</div>
+		<div id="contentSub"></div>
+		<div id="jump-to-nav">Jump to: <a href="http://combustory.com/wiki/index.php/RTC1307_-_Real_Time_Clock#column-one">navigation</a>, <a href="http://combustory.com/wiki/index.php/RTC1307_-_Real_Time_Clock#searchInput">search</a></div>
+		<!-- start content -->
+<p><iframe name="anyweb" src="http://emotorwerks.com/JuiceBox_Public/99%20-%20Supporting%20materials/ICs/RTC/RTC1307&#32;-&#32;Real&#32;Time&#32;Clock&#32;-&#32;Combustory_files/ad_rtc_1.htm" width="800" height="130" frameborder="0"></iframe>
+</p><p><big>Welcome to <a href="http://combustory.com/" class="external text" rel="nofollow">Combustory</a></big>
+</p><p><br>
+<b>Any questions or comments:</b>
+</p>
+<ul><li> Send them to - combustor@combustory.com
+</li></ul>
+<table cellspacing="0" cellpadding="0" style="clear: left; margin-bottom: .5em; float: left; padding: .5em 1.4em .8em 0; background: none; width: auto;">
+<tbody><tr>
+<td> <table id="toc" class="toc"><tbody><tr><td><div id="toctitle"><h2>Contents</h2> <span class="toctoggle">[<a id="togglelink" class="internal" href="http://combustory.com/wiki/index.php/RTC1307_-_Real_Time_Clock#">hide</a>]</span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="http://combustory.com/wiki/index.php/RTC1307_-_Real_Time_Clock#Summary"><span class="tocnumber">1</span> <span class="toctext">Summary</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="http://combustory.com/wiki/index.php/RTC1307_-_Real_Time_Clock#RTC_Module_Schematic"><span class="tocnumber">2</span> <span class="toctext">RTC Module Schematic</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="http://combustory.com/wiki/index.php/RTC1307_-_Real_Time_Clock#DS1307_Chip_Schematic"><span class="tocnumber">3</span> <span class="toctext">DS1307 Chip Schematic</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="http://combustory.com/wiki/index.php/RTC1307_-_Real_Time_Clock#Method"><span class="tocnumber">4</span> <span class="toctext">Method</span></a>
+<ul>
+<li class="toclevel-2 tocsection-5"><a href="http://combustory.com/wiki/index.php/RTC1307_-_Real_Time_Clock#I2C"><span class="tocnumber">4.1</span> <span class="toctext">I2C</span></a>
+<ul>
+<li class="toclevel-3 tocsection-6"><a href="http://combustory.com/wiki/index.php/RTC1307_-_Real_Time_Clock#Arduino_1.0"><span class="tocnumber">4.1.1</span> <span class="toctext">Arduino 1.0</span></a></li>
+<li class="toclevel-3 tocsection-7"><a href="http://combustory.com/wiki/index.php/RTC1307_-_Real_Time_Clock#Examples"><span class="tocnumber">4.1.2</span> <span class="toctext">Examples</span></a>
+<ul>
+<li class="toclevel-4 tocsection-8"><a href="http://combustory.com/wiki/index.php/RTC1307_-_Real_Time_Clock#Reading_Data"><span class="tocnumber">4.1.2.1</span> <span class="toctext">Reading Data</span></a></li>
+<li class="toclevel-4 tocsection-9"><a href="http://combustory.com/wiki/index.php/RTC1307_-_Real_Time_Clock#Writing_Data"><span class="tocnumber">4.1.2.2</span> <span class="toctext">Writing Data</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-10"><a href="http://combustory.com/wiki/index.php/RTC1307_-_Real_Time_Clock#RTC_DS1307_Control_v1.00_code"><span class="tocnumber">4.2</span> <span class="toctext">RTC_DS1307_Control v1.00 code</span></a>
+<ul>
+<li class="toclevel-3 tocsection-11"><a href="http://combustory.com/wiki/index.php/RTC1307_-_Real_Time_Clock#RTC_DS1307_v.01_User_Guide"><span class="tocnumber">4.2.1</span> <span class="toctext">RTC_DS1307_v.01 User Guide</span></a></li>
+<li class="toclevel-3 tocsection-12"><a href="http://combustory.com/wiki/index.php/RTC1307_-_Real_Time_Clock#Commands"><span class="tocnumber">4.2.2</span> <span class="toctext">Commands</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</td></tr></tbody></table>
+</td></tr></tbody></table> <div style="float: right; clear: right; margin-left: 1.4em"> <iframe name="anyweb" src="http://emotorwerks.com/JuiceBox_Public/99%20-%20Supporting%20materials/ICs/RTC/RTC1307&#32;-&#32;Real&#32;Time&#32;Clock&#32;-&#32;Combustory_files/ad_rtc_2.htm" width="330" height="290" frameborder="0"></iframe> </div>
+<p><br>
+<iframe name="anyweb" src="http://emotorwerks.com/JuiceBox_Public/99%20-%20Supporting%20materials/ICs/RTC/RTC1307&#32;-&#32;Real&#32;Time&#32;Clock&#32;-&#32;Combustory_files/ad_rtc_1.htm" width="800" height="130" frameborder="0"></iframe>
+</p>
+<h2> <span class="mw-headline" id="Summary"> Summary </span></h2>
+<p>This code shows how to communicate with the RTC DS1307 Real Time Clock, which is used to set and retrieve the date/time of the chip. As a bonus there are some additional bytes of data that can be used as general purpose memory.  The main reason for my use of this code is to be able to log events that occur in my applications.  I recommend for you to get the RTC DS1307 data sheet to help with understanding what was done here.  The bottom line is that I have created this program to accept commands via serial communication with a PC to instruct the Arduino to send or receive data via I2C to the storage registers of the RTC DS1307 chip. 
+</p><p>Note of gratitude to <a href="http://www.glacialwanderer.com/hobbyrobotics/?p=12" class="external text" rel="nofollow">Maurice Ribble - http://www.glacialwanderer.com/hobbyrobotics/?p=12</a> for the majority of the RTC DS1307 code.  To not repeat his excellent instructions on this chip I highly recommend you visit his site on this topic.  All I did here was expand his code a to get a little more functionality out of the DS1307 chip.
+</p>
+<h2> <span class="mw-headline" id="RTC_Module_Schematic">RTC Module Schematic</span></h2>
+<p><a href="http://combustory.com/wiki/index.php/File:Rtc_module_schematic.jpg" class="image"><img alt="Rtc module schematic.jpg" src="http://emotorwerks.com/JuiceBox_Public/99%20-%20Supporting%20materials/ICs/RTC/RTC1307&#32;-&#32;Real&#32;Time&#32;Clock&#32;-&#32;Combustory_files/600px-Rtc_module_schematic.jpg" width="600" height="373"></a>
+</p><p><br>
+</p>
+<h2> <span class="mw-headline" id="DS1307_Chip_Schematic">DS1307 Chip Schematic</span></h2>
+<p>I just wanted to make a note on this schematic. I used the voltage divider method to get 3vdc to pin 3, but you can also use a 3vdc battery if you desire. You can also try to change the resistor values so they do not use 100mA as my solution does. I did not know how much current pin 3 required, so I chose low resistor values. I suspect you could use a much higher value and get the same result without using all that current. I left the values as I have used them, because I know it works, but feel free to experiment if you use this method which you would probably want to optimize if you plan on using a battery for your 5vdc source.
+</p>
+<div class="thumb tleft"><div class="thumbinner" style="width:302px;"><a href="http://combustory.com/wiki/index.php/File:DS1307_pin_out.jpg" class="image"><img alt="DS1307 pin out.jpg" src="http://emotorwerks.com/JuiceBox_Public/99%20-%20Supporting%20materials/ICs/RTC/RTC1307&#32;-&#32;Real&#32;Time&#32;Clock&#32;-&#32;Combustory_files/300px-DS1307_pin_out.jpg" width="300" height="174" class="thumbimage"></a>  <div class="thumbcaption"><div class="magnify"><a href="http://combustory.com/wiki/index.php/File:DS1307_pin_out.jpg" class="internal" title="Enlarge"><img src="http://emotorwerks.com/JuiceBox_Public/99%20-%20Supporting%20materials/ICs/RTC/RTC1307&#32;-&#32;Real&#32;Time&#32;Clock&#32;-&#32;Combustory_files/magnify-clip.png" width="15" height="11" alt=""></a></div></div></div></div> <iframe name="anyweb" src="http://emotorwerks.com/JuiceBox_Public/99%20-%20Supporting%20materials/ICs/RTC/RTC1307&#32;-&#32;Real&#32;Time&#32;Clock&#32;-&#32;Combustory_files/ad_rtc_2.htm" width="330" height="290" frameborder="0"></iframe>
+<p><iframe name="anyweb" src="http://emotorwerks.com/JuiceBox_Public/99%20-%20Supporting%20materials/ICs/RTC/RTC1307&#32;-&#32;Real&#32;Time&#32;Clock&#32;-&#32;Combustory_files/chitika_map_1.htm" width="600" height="300" frameborder="0"></iframe>
+</p><p><a href="http://combustory.com/wiki/index.php/File:Ds1307_schematic.jpg" class="image"><img alt="Ds1307 schematic.jpg" src="http://emotorwerks.com/JuiceBox_Public/99%20-%20Supporting%20materials/ICs/RTC/RTC1307&#32;-&#32;Real&#32;Time&#32;Clock&#32;-&#32;Combustory_files/600px-Ds1307_schematic.jpg" width="600" height="453"></a>
+</p>
+<h2> <span class="mw-headline" id="Method"> Method </span></h2>
+<p>If you want to take the easy route, spend the extra bucks and buy a <a href="http://www.sparkfun.com/commerce/product_info.php?products_id=99" class="external text" rel="nofollow">Spark Fun</a> ready to go unit for around $15.  However, if you really prefer spending an extra hour or so (In my case 4 hours, but you get the benefit of my labor&nbsp;;~), then buy a few chips from Digikey or Mouser. I think I spent a couple bucks to pay for the chip and the crystal, I ended up having to use two resistors as well, but those were from my existing inventory. If you go the chip route, just keep in mind that shipping can be significant, so you will want to buy more than just the chip. 
+</p><p>The reason I had to use the resistors, was to create a voltage divider to create a voltage on the battery backup pin.  As I found out and fortunately you will not endure because you are reading this right now, is that the battery pin must have 2.5-3vdc to operate properly or the chip will stop responding to IC2 requests. Ok, we all know the rule, "When all else fails, READ THE DIRECTIONS". As wisdom will have it, I eventually read this seemingly insignificant information in the Data Sheet. Well if I get the time I will outline all the details on the parts and schematic, but the bottom line is that I was still to cheap to buy a 3v battery, so I just used the voltage divider to drop the 5vdc supply. The absolute most funny part is that the chip does run just fine without the 3vdc...... sometimes.  Meaning you think you have it all worked out and then......... sometimes.  Hence four hours.  But your not going to make that mistake are you?  Because you are here.  Soooooooo, after all is said and done the chip is very stable and works as expected and is reliable.  
+</p><p>Concerning the semi-non-volatile memory on this chip, I have included the ability to initialize and read the memory. Originally I was unable to read/write all the registers, but someone had resolved this issue by understanding the limitation of this chip or I2C, I am not entirely sure. However, the solution was to limit the number of register writes to 32 registers per I2C session. The code now includes this fix and all registers can be written by creating two I2C sessions. 
+</p><p>This page does not cover the clock output pin that has several settings for outputting a clock frequency, so I will leave it to the reader to figure that function out, as I have no need for that right now.  Another interesting feature on this chip is that the time and memory is maintained as long as you have that battery backup at 2.5-3v. But if the chip goes into backup mode, you will not be able to read or write to any of the registers.  One misleading piece of data in the Data Sheet is that the memory is non-volatile, well that is true as long as you have the battery backup power.  In my voltage divider method, when the power is gone it is gone-gone, so basically no data is retained, but that is exactly why I made the date/time setting command, because I just reset it from the host software that I use to control the Arduino. Go to <a href="http://combustory.com/wiki/index.php/Arduino_Communications" title="Arduino Communications">Arduino Communications</a> to see how I am communicating with the Arduino.
+</p>
+<h3> <span class="mw-headline" id="I2C"> I2C </span></h3>
+<h4> <span class="mw-headline" id="Arduino_1.0">Arduino 1.0</span></h4>
+<p>The current code examples have been updated to Arduino 1.0. The only difference in these examples is from the <i>wire.h</i> Library. The methods have changed as follows:
+</p>
+<ul><li> Wire.send is now <i>Wire.write</i>
+</li><li> Wire.receive is now <i>Wire.read</i>
+</li></ul>
+<p>The RTC_DS1307_Control code below uses pre-compiler directives to solve version incompatibility issues.
+</p>
+<h4> <span class="mw-headline" id="Examples">Examples</span></h4>
+<p>There are basically only two operations that control this chip, a read or write to 64 data registers and the process is similar for both read or write.
+</p>
+<h5> <span class="mw-headline" id="Reading_Data">Reading Data</span></h5>
+<ul><li><ul><li> Reading date/time
+<ul><li> Open the I2C communication in write mode.
+</li><li> Set the register pointer to (0x00) - To read the date/time you reset the pointer to the first register.
+</li><li> End write mode.
+</li><li> Open I2C in read mode and read seven bytes of data.
+</li></ul>
+</li></ul>
+</li></ul>
+<div dir="ltr"><pre class="c source-c">Wire.<span class="me1">beginTransmission</span><span class="br0">(</span>DS1307_I2C_ADDRESS<span class="br0">)</span><span class="sy0">;</span>   <span class="co1">// Open I2C line in write mode</span>
+  Wire.<span class="me1">write</span><span class="br0">(</span><span class="br0">(</span>byte<span class="br0">)</span><span class="nu12">0x00</span><span class="br0">)</span><span class="sy0">;</span>                              <span class="co1">// Set the register pointer to (0x00)</span>
+  Wire.<span class="me1">endTransmission</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>                       <span class="co1">// End Write Transmission </span>
+&nbsp;
+  Wire.<span class="me1">requestFrom</span><span class="br0">(</span>DS1307_I2C_ADDRESS<span class="sy0">,</span> <span class="nu0">7</span><span class="br0">)</span><span class="sy0">;</span>      <span class="co1">// Open the I2C line in send mode</span>
+&nbsp;
+  second     <span class="sy0">=</span> bcdToDec<span class="br0">(</span>Wire.<span class="me1">read</span><span class="br0">(</span><span class="br0">)</span> <span class="sy0">&amp;</span> <span class="nu12">0x7f</span><span class="br0">)</span><span class="sy0">;</span> <span class="co1">// Read seven bytes of data</span>
+  minute     <span class="sy0">=</span> bcdToDec<span class="br0">(</span>Wire.<span class="me1">read</span><span class="br0">(</span><span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+  hour       <span class="sy0">=</span> bcdToDec<span class="br0">(</span>Wire.<span class="me1">read</span><span class="br0">(</span><span class="br0">)</span> <span class="sy0">&amp;</span> <span class="nu12">0x3f</span><span class="br0">)</span><span class="sy0">;</span>  
+  dayOfWeek  <span class="sy0">=</span> bcdToDec<span class="br0">(</span>Wire.<span class="me1">read</span><span class="br0">(</span><span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+  dayOfMonth <span class="sy0">=</span> bcdToDec<span class="br0">(</span>Wire.<span class="me1">read</span><span class="br0">(</span><span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+  month      <span class="sy0">=</span> bcdToDec<span class="br0">(</span>Wire.<span class="me1">read</span><span class="br0">(</span><span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+  year       <span class="sy0">=</span> bcdToDec<span class="br0">(</span>Wire.<span class="me1">read</span><span class="br0">(</span><span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span></pre></div>
+<ul><li><ul><li> Reading Memory - The process is essentially the same as Reading date/time with two small differences
+<ul><li> (1) You have to set the register pointer where you want to read the memory.
+</li><li> (2) You have to indicate how many bytes to read.
+</li></ul>
+</li></ul>
+</li></ul>
+<div dir="ltr"><pre class="c source-c">Wire.<span class="me1">beginTransmission</span><span class="br0">(</span>DS1307_I2C_ADDRESS<span class="br0">)</span><span class="sy0">;</span>  
+  Wire.<span class="me1">send</span><span class="br0">(</span><span class="nu12">0x08</span><span class="br0">)</span><span class="sy0">;</span>                             <span class="co1">// Set the register pointer to (0x08) to read first memory byte</span>
+  Wire.<span class="me1">endTransmission</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>                      
+&nbsp;
+  Wire.<span class="me1">requestFrom</span><span class="br0">(</span>DS1307_I2C_ADDRESS<span class="sy0">,</span> <span class="nu0">1</span><span class="br0">)</span><span class="sy0">;</span>     <span class="co1">// In this case only read one byte</span>
+&nbsp;
+  temp_byte     <span class="sy0">=</span> Wire.<span class="me1">read</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>              <span class="co1">// Read the desired byte</span></pre></div>
+<h5> <span class="mw-headline" id="Writing_Data">Writing Data</span></h5>
+<ul><li> Write date/time.
+<ul><li> Open the I2C communication in write mode.
+</li><li> Set the register pointer to (0x00) - To write the date/time you reset the pointer to the first register.
+</li><li> Write seven bytes of data.
+</li><li> End write mode.
+</li></ul>
+</li></ul>
+<div dir="ltr"><pre class="c source-c">Wire.<span class="me1">beginTransmission</span><span class="br0">(</span>DS1307_I2C_ADDRESS<span class="br0">)</span><span class="sy0">;</span>  <span class="co1">// Open I2C line in write mode</span>
+&nbsp;
+   Wire.<span class="me1">write</span><span class="br0">(</span><span class="br0">(</span>byte<span class="br0">)</span><span class="nu12">0x00</span><span class="br0">)</span><span class="sy0">;</span>                           <span class="co1">// Set the register pointer to (0x00)</span>
+   Wire.<span class="me1">write</span><span class="br0">(</span>decToBcd<span class="br0">(</span>second<span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>               <span class="co1">// Write seven bytes</span>
+   Wire.<span class="me1">write</span><span class="br0">(</span>decToBcd<span class="br0">(</span>minute<span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+   Wire.<span class="me1">write</span><span class="br0">(</span>decToBcd<span class="br0">(</span>hour<span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>      
+   Wire.<span class="me1">write</span><span class="br0">(</span>decToBcd<span class="br0">(</span>dayOfWeek<span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+   Wire.<span class="me1">write</span><span class="br0">(</span>decToBcd<span class="br0">(</span>dayOfMonth<span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+   Wire.<span class="me1">write</span><span class="br0">(</span>decToBcd<span class="br0">(</span>month<span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+   Wire.<span class="me1">write</span><span class="br0">(</span>decToBcd<span class="br0">(</span>year<span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+   Wire.<span class="me1">endTransmission</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>                    <span class="co1">// End write mode</span></pre></div>
+<ul><li><ul><li> Writing Memory - The process is essentially the same as writing date/time with two small differences
+<ul><li> (1) You have to set the register pointer where you want to write the memory.
+</li><li> (2) Now write the byte value you want in that memory location.
+</li></ul>
+</li></ul>
+</li></ul>
+<p><br>
+<b>Note: You can continue writing and the register pointer will go to the next memory location. When the pointer reaches the end of the memory it will start back at the beginning, which will overwrite your date/time if you are not careful.</b> 
+</p>
+<div dir="ltr"><pre class="c source-c">Wire.<span class="me1">beginTransmission</span><span class="br0">(</span>DS1307_I2C_ADDRESS<span class="br0">)</span><span class="sy0">;</span>  
+  Wire.<span class="me1">write</span><span class="br0">(</span><span class="nu12">0xf3</span><span class="br0">)</span><span class="sy0">;</span>                             <span class="co1">// Set the register pointer to (0xf3) to write the 11th memory byte</span>
+  Wire.<span class="me1">write</span><span class="br0">(</span><span class="nu12">0xa6</span><span class="br0">)</span><span class="sy0">;</span>                             <span class="co1">// Write the desired byte value</span>
+  Wire.<span class="me1">endTransmission</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span></pre></div>
+<p><br>
+</p>
+<h3> <span class="mw-headline" id="RTC_DS1307_Control_v1.00_code">RTC_DS1307_Control v1.00 code</span></h3>
+<div dir="ltr"><pre class="c source-c"><span class="coMULTI">/* RTC Control v1.00 
+ * by &lt;http://www.combustory.com&gt; John Vaughters
+ *
+ * THIS CODE IS FREE FOR ANYTHING  - There is no Rocket Science here. No need to create some long GPL statement.
+ *
+ * Credit to:
+ * Maurice Ribble - http://www.glacialwanderer.com/hobbyrobotics for RTC DS1307 code
+ * BB Riley - Underhill Center, VT  &lt;brianbr@wulfden.org&gt; For simplification of the Day of Week and month
+ *                                                        and updating to Arduino 1.0 
+ * peep rada - from Arduino Forum - Found that only 32 registers per I2C connection was possible 
+ * 
+ * With this code you can set the date/time, retreive the date/time and use the extra memory of an RTC DS1307 chip.  
+ * The program also sets all the extra memory space to 0xff.
+ * Serial Communication method with the Arduino that utilizes a leading CHAR for each command described below. 
+ *
+ * Commands:
+ * T(00-59)(00-59)(00-23)(1-7)(01-31)(01-12)(00-99) - T(sec)(min)(hour)(dayOfWeek)(dayOfMonth)(month)(year) -
+ * T - Sets the date of the RTC DS1307 Chip. 
+ * Example to set the time for 25-Jan-2012 @ 19:57:11 for the 4 day of the week, use this command - T1157194250112
+ * Q(1-2) - (Q1) Memory initialization  (Q2) RTC - Memory Dump  
+ * R - Read/display the time, day and date
+ *
+ * ---------------------------------------------------------
+ * Notes:
+ * Version 1.0
+ *    Moving this code to Version 1.0 because this code has been updated to Arduino v1.0 and the features have
+ *    been well tested and improved in a collaborative effort.
+ *    - Fixed the issue of not being able to access all the registers - JWV
+ *    - Added initialization for all non-time registers - JWV
+ *    - Added Dump of all 64 registers - JWV
+ *    - Some Date/Time reformatting and cleanup of display, added Day/Month texts - BBR
+ *    - Made compatible with Arduino 1.0 - BBR
+ *    - Added Rr command for reading date/time - BBR
+ *    - Made commands case insensitive - BBR
+ *    - Create #define varibles to support pre Arduino v1.0 - JWV
+ * Version 0.01
+ *    Inital code with basics of setting time and the first 37 registers and dumping the first 32 registers. 
+ *    The code was based on Maurice Ribble's original code.
+ * 
+ */</span>
+&nbsp;
+<span class="co2">#include "Wire.h"</span>
+<span class="co2">#define DS1307_I2C_ADDRESS 0x68  // This is the I2C address</span>
+<span class="co1">// Arduino version compatibility Pre-Compiler Directives</span>
+<span class="co2">#if defined(ARDUINO) &amp;&amp; ARDUINO &gt;= 100   // Arduino v1.0 and newer</span>
+  <span class="co2">#define I2C_WRITE Wire.write </span>
+  <span class="co2">#define I2C_READ Wire.read</span>
+<span class="co2">#else                                   // Arduino Prior to v1.0 </span>
+  <span class="co2">#define I2C_WRITE Wire.send </span>
+  <span class="co2">#define I2C_READ Wire.receive</span>
+<span class="co2">#endif</span>
+<span class="co1">// Global Variables</span>
+<span class="kw4">int</span> command <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span>       <span class="co1">// This is the command char, in ascii form, sent from the serial port     </span>
+<span class="kw4">int</span> i<span class="sy0">;</span>
+<span class="kw4">long</span> previousMillis <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span>        <span class="co1">// will store last time Temp was updated</span>
+byte second<span class="sy0">,</span> minute<span class="sy0">,</span> hour<span class="sy0">,</span> dayOfWeek<span class="sy0">,</span> dayOfMonth<span class="sy0">,</span> month<span class="sy0">,</span> year<span class="sy0">;</span>
+byte test<span class="sy0">;</span>
+byte zero<span class="sy0">;</span>
+<span class="kw4">char</span>  <span class="sy0">*</span>Day<span class="br0">[</span><span class="br0">]</span> <span class="sy0">=</span> <span class="br0">{</span><span class="st0">""</span><span class="sy0">,</span><span class="st0">"Sun"</span><span class="sy0">,</span><span class="st0">"Mon"</span><span class="sy0">,</span><span class="st0">"Tue"</span><span class="sy0">,</span><span class="st0">"Wed"</span><span class="sy0">,</span><span class="st0">"Thu"</span><span class="sy0">,</span><span class="st0">"Fri"</span><span class="sy0">,</span><span class="st0">"Sat"</span><span class="br0">}</span><span class="sy0">;</span>
+<span class="kw4">char</span>  <span class="sy0">*</span>Mon<span class="br0">[</span><span class="br0">]</span> <span class="sy0">=</span> <span class="br0">{</span><span class="st0">""</span><span class="sy0">,</span><span class="st0">"Jan"</span><span class="sy0">,</span><span class="st0">"Feb"</span><span class="sy0">,</span><span class="st0">"Mar"</span><span class="sy0">,</span><span class="st0">"Apr"</span><span class="sy0">,</span><span class="st0">"May"</span><span class="sy0">,</span><span class="st0">"Jun"</span><span class="sy0">,</span><span class="st0">"Jul"</span><span class="sy0">,</span><span class="st0">"Aug"</span><span class="sy0">,</span><span class="st0">"Sep"</span><span class="sy0">,</span><span class="st0">"Oct"</span><span class="sy0">,</span><span class="st0">"Nov"</span><span class="sy0">,</span><span class="st0">"Dec"</span><span class="br0">}</span><span class="sy0">;</span>
+&nbsp;
+<span class="co1">// Convert normal decimal numbers to binary coded decimal</span>
+byte decToBcd<span class="br0">(</span>byte val<span class="br0">)</span>
+<span class="br0">{</span>
+  <span class="kw1">return</span> <span class="br0">(</span> <span class="br0">(</span>val<span class="sy0">/</span><span class="nu0">10</span><span class="sy0">*</span><span class="nu0">16</span><span class="br0">)</span> <span class="sy0">+</span> <span class="br0">(</span>val<span class="sy0">%</span><span class="nu19">10</span><span class="br0">)</span> <span class="br0">)</span><span class="sy0">;</span>
+<span class="br0">}</span>
+&nbsp;
+<span class="co1">// Convert binary coded decimal to normal decimal numbers</span>
+byte bcdToDec<span class="br0">(</span>byte val<span class="br0">)</span>
+<span class="br0">{</span>
+  <span class="kw1">return</span> <span class="br0">(</span> <span class="br0">(</span>val<span class="sy0">/</span><span class="nu0">16</span><span class="sy0">*</span><span class="nu0">10</span><span class="br0">)</span> <span class="sy0">+</span> <span class="br0">(</span>val<span class="sy0">%</span><span class="nu19">16</span><span class="br0">)</span> <span class="br0">)</span><span class="sy0">;</span>
+<span class="br0">}</span>
+&nbsp;
+<span class="co1">// 1) Sets the date and time on the ds1307</span>
+<span class="co1">// 2) Starts the clock</span>
+<span class="co1">// 3) Sets hour mode to 24 hour clock</span>
+<span class="co1">// Assumes you're passing in valid numbers, Probably need to put in checks for valid numbers.</span>
+&nbsp;
+<span class="kw4">void</span> setDateDs1307<span class="br0">(</span><span class="br0">)</span>                
+<span class="br0">{</span>
+&nbsp;
+   second <span class="sy0">=</span> <span class="br0">(</span>byte<span class="br0">)</span> <span class="br0">(</span><span class="br0">(</span>Serial.<span class="me1">read</span><span class="br0">(</span><span class="br0">)</span> <span class="sy0">-</span> <span class="nu0">48</span><span class="br0">)</span> <span class="sy0">*</span> <span class="nu0">10</span> <span class="sy0">+</span> <span class="br0">(</span>Serial.<span class="me1">read</span><span class="br0">(</span><span class="br0">)</span> <span class="sy0">-</span> <span class="nu0">48</span><span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span> <span class="co1">// Use of (byte) type casting and ascii math to achieve result.  </span>
+   minute <span class="sy0">=</span> <span class="br0">(</span>byte<span class="br0">)</span> <span class="br0">(</span><span class="br0">(</span>Serial.<span class="me1">read</span><span class="br0">(</span><span class="br0">)</span> <span class="sy0">-</span> <span class="nu0">48</span><span class="br0">)</span> <span class="sy0">*</span><span class="nu0">10</span> <span class="sy0">+</span>  <span class="br0">(</span>Serial.<span class="me1">read</span><span class="br0">(</span><span class="br0">)</span> <span class="sy0">-</span> <span class="nu0">48</span><span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+   hour  <span class="sy0">=</span> <span class="br0">(</span>byte<span class="br0">)</span> <span class="br0">(</span><span class="br0">(</span>Serial.<span class="me1">read</span><span class="br0">(</span><span class="br0">)</span> <span class="sy0">-</span> <span class="nu0">48</span><span class="br0">)</span> <span class="sy0">*</span><span class="nu0">10</span> <span class="sy0">+</span>  <span class="br0">(</span>Serial.<span class="me1">read</span><span class="br0">(</span><span class="br0">)</span> <span class="sy0">-</span> <span class="nu0">48</span><span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+   dayOfWeek <span class="sy0">=</span> <span class="br0">(</span>byte<span class="br0">)</span> <span class="br0">(</span>Serial.<span class="me1">read</span><span class="br0">(</span><span class="br0">)</span> <span class="sy0">-</span> <span class="nu0">48</span><span class="br0">)</span><span class="sy0">;</span>
+   dayOfMonth <span class="sy0">=</span> <span class="br0">(</span>byte<span class="br0">)</span> <span class="br0">(</span><span class="br0">(</span>Serial.<span class="me1">read</span><span class="br0">(</span><span class="br0">)</span> <span class="sy0">-</span> <span class="nu0">48</span><span class="br0">)</span> <span class="sy0">*</span><span class="nu0">10</span> <span class="sy0">+</span>  <span class="br0">(</span>Serial.<span class="me1">read</span><span class="br0">(</span><span class="br0">)</span> <span class="sy0">-</span> <span class="nu0">48</span><span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+   month <span class="sy0">=</span> <span class="br0">(</span>byte<span class="br0">)</span> <span class="br0">(</span><span class="br0">(</span>Serial.<span class="me1">read</span><span class="br0">(</span><span class="br0">)</span> <span class="sy0">-</span> <span class="nu0">48</span><span class="br0">)</span> <span class="sy0">*</span><span class="nu0">10</span> <span class="sy0">+</span>  <span class="br0">(</span>Serial.<span class="me1">read</span><span class="br0">(</span><span class="br0">)</span> <span class="sy0">-</span> <span class="nu0">48</span><span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+   year<span class="sy0">=</span> <span class="br0">(</span>byte<span class="br0">)</span> <span class="br0">(</span><span class="br0">(</span>Serial.<span class="me1">read</span><span class="br0">(</span><span class="br0">)</span> <span class="sy0">-</span> <span class="nu0">48</span><span class="br0">)</span> <span class="sy0">*</span><span class="nu0">10</span> <span class="sy0">+</span>  <span class="br0">(</span>Serial.<span class="me1">read</span><span class="br0">(</span><span class="br0">)</span> <span class="sy0">-</span> <span class="nu0">48</span><span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+   Wire.<span class="me1">beginTransmission</span><span class="br0">(</span>DS1307_I2C_ADDRESS<span class="br0">)</span><span class="sy0">;</span>
+   I2C_WRITE<span class="br0">(</span>zero<span class="br0">)</span><span class="sy0">;</span>
+   I2C_WRITE<span class="br0">(</span>decToBcd<span class="br0">(</span>second<span class="br0">)</span> <span class="sy0">&amp;</span> <span class="nu12">0x7f</span><span class="br0">)</span><span class="sy0">;</span>    <span class="co1">// 0 to bit 7 starts the clock</span>
+   I2C_WRITE<span class="br0">(</span>decToBcd<span class="br0">(</span>minute<span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+   I2C_WRITE<span class="br0">(</span>decToBcd<span class="br0">(</span>hour<span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>      <span class="co1">// If you want 12 hour am/pm you need to set</span>
+                                   <span class="co1">// bit 6 (also need to change readDateDs1307)</span>
+   I2C_WRITE<span class="br0">(</span>decToBcd<span class="br0">(</span>dayOfWeek<span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+   I2C_WRITE<span class="br0">(</span>decToBcd<span class="br0">(</span>dayOfMonth<span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+   I2C_WRITE<span class="br0">(</span>decToBcd<span class="br0">(</span>month<span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+   I2C_WRITE<span class="br0">(</span>decToBcd<span class="br0">(</span>year<span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+   Wire.<span class="me1">endTransmission</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+<span class="br0">}</span>
+&nbsp;
+<span class="co1">// Gets the date and time from the ds1307 and prints result</span>
+<span class="kw4">void</span> getDateDs1307<span class="br0">(</span><span class="br0">)</span>
+<span class="br0">{</span>
+  <span class="co1">// Reset the register pointer</span>
+  Wire.<span class="me1">beginTransmission</span><span class="br0">(</span>DS1307_I2C_ADDRESS<span class="br0">)</span><span class="sy0">;</span>
+  I2C_WRITE<span class="br0">(</span>zero<span class="br0">)</span><span class="sy0">;</span>
+  Wire.<span class="me1">endTransmission</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+&nbsp;
+  Wire.<span class="me1">requestFrom</span><span class="br0">(</span>DS1307_I2C_ADDRESS<span class="sy0">,</span> <span class="nu0">7</span><span class="br0">)</span><span class="sy0">;</span>
+&nbsp;
+  <span class="co1">// A few of these need masks because certain bits are control bits</span>
+  second     <span class="sy0">=</span> bcdToDec<span class="br0">(</span>I2C_READ<span class="br0">(</span><span class="br0">)</span> <span class="sy0">&amp;</span> <span class="nu12">0x7f</span><span class="br0">)</span><span class="sy0">;</span>
+  minute     <span class="sy0">=</span> bcdToDec<span class="br0">(</span>I2C_READ<span class="br0">(</span><span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+  hour       <span class="sy0">=</span> bcdToDec<span class="br0">(</span>I2C_READ<span class="br0">(</span><span class="br0">)</span> <span class="sy0">&amp;</span> <span class="nu12">0x3f</span><span class="br0">)</span><span class="sy0">;</span>  <span class="co1">// Need to change this if 12 hour am/pm</span>
+  dayOfWeek  <span class="sy0">=</span> bcdToDec<span class="br0">(</span>I2C_READ<span class="br0">(</span><span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+  dayOfMonth <span class="sy0">=</span> bcdToDec<span class="br0">(</span>I2C_READ<span class="br0">(</span><span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+  month      <span class="sy0">=</span> bcdToDec<span class="br0">(</span>I2C_READ<span class="br0">(</span><span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+  year       <span class="sy0">=</span> bcdToDec<span class="br0">(</span>I2C_READ<span class="br0">(</span><span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+&nbsp;
+  <span class="kw1">if</span> <span class="br0">(</span>hour <span class="sy0">&lt;</span> <span class="nu0">10</span><span class="br0">)</span>
+    Serial.<span class="me1">print</span><span class="br0">(</span><span class="st0">"0"</span><span class="br0">)</span><span class="sy0">;</span>
+  Serial.<span class="me1">print</span><span class="br0">(</span>hour<span class="sy0">,</span> DEC<span class="br0">)</span><span class="sy0">;</span>
+  Serial.<span class="me1">print</span><span class="br0">(</span><span class="st0">":"</span><span class="br0">)</span><span class="sy0">;</span>
+  <span class="kw1">if</span> <span class="br0">(</span>minute <span class="sy0">&lt;</span> <span class="nu0">10</span><span class="br0">)</span>
+    Serial.<span class="me1">print</span><span class="br0">(</span><span class="st0">"0"</span><span class="br0">)</span><span class="sy0">;</span>
+  Serial.<span class="me1">print</span><span class="br0">(</span>minute<span class="sy0">,</span> DEC<span class="br0">)</span><span class="sy0">;</span>
+  Serial.<span class="me1">print</span><span class="br0">(</span><span class="st0">":"</span><span class="br0">)</span><span class="sy0">;</span>
+  <span class="kw1">if</span> <span class="br0">(</span>second <span class="sy0">&lt;</span> <span class="nu0">10</span><span class="br0">)</span>
+    Serial.<span class="me1">print</span><span class="br0">(</span><span class="st0">"0"</span><span class="br0">)</span><span class="sy0">;</span>
+  Serial.<span class="me1">print</span><span class="br0">(</span>second<span class="sy0">,</span> DEC<span class="br0">)</span><span class="sy0">;</span>
+  Serial.<span class="me1">print</span><span class="br0">(</span><span class="st0">"  "</span><span class="br0">)</span><span class="sy0">;</span>
+  Serial.<span class="me1">print</span><span class="br0">(</span>Day<span class="br0">[</span>dayOfWeek<span class="br0">]</span><span class="br0">)</span><span class="sy0">;</span>
+  Serial.<span class="me1">print</span><span class="br0">(</span><span class="st0">", "</span><span class="br0">)</span><span class="sy0">;</span>
+  Serial.<span class="me1">print</span><span class="br0">(</span>dayOfMonth<span class="sy0">,</span> DEC<span class="br0">)</span><span class="sy0">;</span>
+  Serial.<span class="me1">print</span><span class="br0">(</span><span class="st0">" "</span><span class="br0">)</span><span class="sy0">;</span>
+  Serial.<span class="me1">print</span><span class="br0">(</span>Mon<span class="br0">[</span>month<span class="br0">]</span><span class="br0">)</span><span class="sy0">;</span>
+  Serial.<span class="me1">print</span><span class="br0">(</span><span class="st0">" 20"</span><span class="br0">)</span><span class="sy0">;</span>
+  <span class="kw1">if</span> <span class="br0">(</span>year <span class="sy0">&lt;</span> <span class="nu0">10</span><span class="br0">)</span>
+    Serial.<span class="me1">print</span><span class="br0">(</span><span class="st0">"0"</span><span class="br0">)</span><span class="sy0">;</span>
+  Serial.<span class="me1">println</span><span class="br0">(</span>year<span class="sy0">,</span> DEC<span class="br0">)</span><span class="sy0">;</span>
+&nbsp;
+<span class="br0">}</span>
+&nbsp;
+&nbsp;
+<span class="kw4">void</span> setup<span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+  Wire.<span class="me1">begin</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+  Serial.<span class="me1">begin</span><span class="br0">(</span><span class="nu0">57600</span><span class="br0">)</span><span class="sy0">;</span> 
+  zero<span class="sy0">=</span><span class="nu12">0x00</span><span class="sy0">;</span>
+<span class="br0">}</span>
+&nbsp;
+<span class="kw4">void</span> loop<span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+     <span class="kw1">if</span> <span class="br0">(</span>Serial.<span class="me1">available</span><span class="br0">(</span><span class="br0">)</span><span class="br0">)</span> <span class="br0">{</span>      <span class="co1">// Look for char in serial que and process if found</span>
+      command <span class="sy0">=</span> Serial.<span class="me1">read</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+      <span class="kw1">if</span> <span class="br0">(</span>command <span class="sy0">==</span> <span class="nu0">84</span> <span class="sy0">||</span> command <span class="sy0">==</span> <span class="nu0">116</span><span class="br0">)</span> <span class="br0">{</span>      <span class="co1">//If command = "Tt" Set Date</span>
+       setDateDs1307<span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+       getDateDs1307<span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+       Serial.<span class="me1">println</span><span class="br0">(</span><span class="st0">" "</span><span class="br0">)</span><span class="sy0">;</span>
+      <span class="br0">}</span>
+      <span class="kw1">else</span> <span class="kw1">if</span> <span class="br0">(</span>command <span class="sy0">==</span> <span class="nu0">82</span> <span class="sy0">||</span> command <span class="sy0">==</span> <span class="nu0">114</span><span class="br0">)</span> <span class="br0">{</span>      <span class="co1">//If command = "Rr" Read Date ... BBR</span>
+       getDateDs1307<span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+       Serial.<span class="me1">println</span><span class="br0">(</span><span class="st0">" "</span><span class="br0">)</span><span class="sy0">;</span>
+      <span class="br0">}</span>
+      <span class="kw1">else</span> <span class="kw1">if</span> <span class="br0">(</span>command <span class="sy0">==</span> <span class="nu0">81</span> <span class="sy0">||</span> command <span class="sy0">==</span> <span class="nu0">113</span><span class="br0">)</span> <span class="br0">{</span>      <span class="co1">//If command = "Qq" RTC1307 Memory Functions</span>
+        delay<span class="br0">(</span><span class="nu0">100</span><span class="br0">)</span><span class="sy0">;</span>     
+        <span class="kw1">if</span> <span class="br0">(</span>Serial.<span class="me1">available</span><span class="br0">(</span><span class="br0">)</span><span class="br0">)</span> <span class="br0">{</span>
+         command <span class="sy0">=</span> Serial.<span class="me1">read</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span> 
+         <span class="kw1">if</span> <span class="br0">(</span>command <span class="sy0">==</span> <span class="nu0">49</span><span class="br0">)</span> <span class="br0">{</span>        <span class="co1">//If command = "1" RTC1307 Initialize Memory - All Data will be set to </span>
+                                       <span class="co1">// 255 (0xff).  Therefore 255 or 0 will be an invalid value.  </span>
+           Wire.<span class="me1">beginTransmission</span><span class="br0">(</span>DS1307_I2C_ADDRESS<span class="br0">)</span><span class="sy0">;</span>   <span class="co1">// 255 will be the init value and 0 will be considered </span>
+                                                          <span class="co1">// an error that occurs when the RTC is in Battery mode.</span>
+           I2C_WRITE<span class="br0">(</span><span class="nu12">0x08</span><span class="br0">)</span><span class="sy0">;</span> <span class="co1">// Set the register pointer to be just past the date/time registers.</span>
+           <span class="kw1">for</span> <span class="br0">(</span>i <span class="sy0">=</span> <span class="nu0">1</span><span class="sy0">;</span> i <span class="sy0">&lt;=</span> <span class="nu0">24</span><span class="sy0">;</span> i<span class="sy0">++</span><span class="br0">)</span> <span class="br0">{</span>
+               I2C_WRITE<span class="br0">(</span><span class="nu12">0Xff</span><span class="br0">)</span><span class="sy0">;</span>
+              delay<span class="br0">(</span><span class="nu0">10</span><span class="br0">)</span><span class="sy0">;</span>
+           <span class="br0">}</span>   
+           Wire.<span class="me1">endTransmission</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+           Wire.<span class="me1">beginTransmission</span><span class="br0">(</span>DS1307_I2C_ADDRESS<span class="br0">)</span><span class="sy0">;</span>   
+           I2C_WRITE<span class="br0">(</span><span class="nu12">0x21</span><span class="br0">)</span><span class="sy0">;</span> <span class="co1">// Set the register pointer to 33 for second half of registers. Only 32 writes per connection allowed.</span>
+           <span class="kw1">for</span> <span class="br0">(</span>i <span class="sy0">=</span> <span class="nu0">1</span><span class="sy0">;</span> i <span class="sy0">&lt;=</span> <span class="nu0">33</span><span class="sy0">;</span> i<span class="sy0">++</span><span class="br0">)</span> <span class="br0">{</span>
+               I2C_WRITE<span class="br0">(</span><span class="nu12">0Xff</span><span class="br0">)</span><span class="sy0">;</span>
+              delay<span class="br0">(</span><span class="nu0">10</span><span class="br0">)</span><span class="sy0">;</span>
+           <span class="br0">}</span>   
+           Wire.<span class="me1">endTransmission</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+           getDateDs1307<span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+           Serial.<span class="me1">println</span><span class="br0">(</span><span class="st0">": RTC1307 Initialized Memory"</span><span class="br0">)</span><span class="sy0">;</span>
+         <span class="br0">}</span>
+         <span class="kw1">else</span> <span class="kw1">if</span> <span class="br0">(</span>command <span class="sy0">==</span> <span class="nu0">50</span><span class="br0">)</span> <span class="br0">{</span>      <span class="co1">//If command = "2" RTC1307 Memory Dump</span>
+          getDateDs1307<span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+          Serial.<span class="me1">println</span><span class="br0">(</span><span class="st0">": RTC 1307 Dump Begin"</span><span class="br0">)</span><span class="sy0">;</span>
+          Wire.<span class="me1">beginTransmission</span><span class="br0">(</span>DS1307_I2C_ADDRESS<span class="br0">)</span><span class="sy0">;</span>
+          I2C_WRITE<span class="br0">(</span>zero<span class="br0">)</span><span class="sy0">;</span>
+          Wire.<span class="me1">endTransmission</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+          Wire.<span class="me1">requestFrom</span><span class="br0">(</span>DS1307_I2C_ADDRESS<span class="sy0">,</span> <span class="nu0">32</span><span class="br0">)</span><span class="sy0">;</span>
+          <span class="kw1">for</span> <span class="br0">(</span>i <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span> i <span class="sy0">&lt;=</span> <span class="nu0">31</span><span class="sy0">;</span> i<span class="sy0">++</span><span class="br0">)</span> <span class="br0">{</span>  <span class="co1">//Register 0-31 - only 32 registers allowed per I2C connection</span>
+             test <span class="sy0">=</span> I2C_READ<span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+             Serial.<span class="me1">print</span><span class="br0">(</span>i<span class="br0">)</span><span class="sy0">;</span>
+             Serial.<span class="me1">print</span><span class="br0">(</span><span class="st0">": "</span><span class="br0">)</span><span class="sy0">;</span>
+             Serial.<span class="me1">print</span><span class="br0">(</span>test<span class="sy0">,</span> DEC<span class="br0">)</span><span class="sy0">;</span>
+             Serial.<span class="me1">print</span><span class="br0">(</span><span class="st0">"&nbsp;: "</span><span class="br0">)</span><span class="sy0">;</span>
+             Serial.<span class="me1">println</span><span class="br0">(</span>test<span class="sy0">,</span> HEX<span class="br0">)</span><span class="sy0">;</span>
+          <span class="br0">}</span>
+          Wire.<span class="me1">beginTransmission</span><span class="br0">(</span>DS1307_I2C_ADDRESS<span class="br0">)</span><span class="sy0">;</span>
+          I2C_WRITE<span class="br0">(</span><span class="nu12">0x20</span><span class="br0">)</span><span class="sy0">;</span>
+          Wire.<span class="me1">endTransmission</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+          Wire.<span class="me1">requestFrom</span><span class="br0">(</span>DS1307_I2C_ADDRESS<span class="sy0">,</span> <span class="nu0">32</span><span class="br0">)</span><span class="sy0">;</span>  
+          <span class="kw1">for</span> <span class="br0">(</span>i <span class="sy0">=</span> <span class="nu0">32</span><span class="sy0">;</span> i <span class="sy0">&lt;=</span> <span class="nu0">63</span><span class="sy0">;</span> i<span class="sy0">++</span><span class="br0">)</span> <span class="br0">{</span>         <span class="co1">//Register 32-63 - only 32 registers allowed per I2C connection</span>
+             test <span class="sy0">=</span> I2C_READ<span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+             Serial.<span class="me1">print</span><span class="br0">(</span>i<span class="br0">)</span><span class="sy0">;</span>
+             Serial.<span class="me1">print</span><span class="br0">(</span><span class="st0">": "</span><span class="br0">)</span><span class="sy0">;</span>
+             Serial.<span class="me1">print</span><span class="br0">(</span>test<span class="sy0">,</span> DEC<span class="br0">)</span><span class="sy0">;</span>
+             Serial.<span class="me1">print</span><span class="br0">(</span><span class="st0">"&nbsp;: "</span><span class="br0">)</span><span class="sy0">;</span>
+             Serial.<span class="me1">println</span><span class="br0">(</span>test<span class="sy0">,</span> HEX<span class="br0">)</span><span class="sy0">;</span>
+          <span class="br0">}</span>
+          Serial.<span class="me1">println</span><span class="br0">(</span><span class="st0">" RTC1307 Dump end"</span><span class="br0">)</span><span class="sy0">;</span>
+         <span class="br0">}</span> 
+        <span class="br0">}</span>  
+       <span class="br0">}</span>
+      Serial.<span class="me1">print</span><span class="br0">(</span><span class="st0">"Command: "</span><span class="br0">)</span><span class="sy0">;</span>
+      Serial.<span class="me1">println</span><span class="br0">(</span>command<span class="br0">)</span><span class="sy0">;</span>     <span class="co1">// Echo command CHAR in ascii that was sent</span>
+      <span class="br0">}</span>
+      command <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span>                 <span class="co1">// reset command </span>
+      delay<span class="br0">(</span><span class="nu0">100</span><span class="br0">)</span><span class="sy0">;</span>
+    <span class="br0">}</span>
+<span class="co1">//*****************************************************The End***********************</span></pre></div>
+<h4> <span class="mw-headline" id="RTC_DS1307_v.01_User_Guide"> RTC_DS1307_v.01 User Guide </span></h4>
+<p>Not much to say here, I tend to use the Arduino in the <a href="http://combustory.com/wiki/index.php/Arduino_Communications" title="Arduino Communications">Arduino Communications</a> Method, so maybe someday I will present the other part of the controlling SW I made for this tool, but I will have to make changes to get it to work correctly for this particular set-up.  
+</p><p>For now just enter the commands from the Arduino Environment or your favorite serial communications method.
+</p>
+<h4> <span class="mw-headline" id="Commands"> Commands </span></h4>
+<pre>Note: Commands are NOT case sensitive. T or t will work.
+</pre>
+<ul><li> T(00-59)(00-59)(00-23)(1-7)(01-31)(01-12)(00-99) - T(sec)(min)(hour)(dayOfWeek)(dayOfMonth)(month)(year) - T Sets the date of the RTC DS1307 Chip. 
+<ul><li> Example to set the time for 25-Jan-2012 @ 19:57:11 for the 4 day of the week, use this command - T1157194250112
+</li></ul>
+</li><li> Q1 - This command will initialize all the non date/time memory to 255 (0xff)
+<ul><li> I do this because when the RTC DS1307 goes into back up mode it returns 0 for any register, so for memory usage a 0 will be considered a failure to read memory and 255 will be a default value. Meaning it is considered null.
+</li></ul>
+</li><li> Q2 - This command will Dump all 64 registers to the serial buffer
+</li><li> R - Read/display the time, day and date
+</li></ul>
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 166/1000000
+Post-expand include size: 644/2097152 bytes
+Template argument size: 0/2097152 bytes
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key wikidb-wikicomb:pcache:idhash:40-0!*!0!!en!2!edit=0 and timestamp 20130720230832 -->
+<div class="printfooter">
+Retrieved from "<a href="http://emotorwerks.com/JuiceBox_Public/99%20-%20Supporting%20materials/ICs/RTC/RTC1307&#32;-&#32;Real&#32;Time&#32;Clock&#32;-&#32;Combustory_files/RTC1307&#32;-&#32;Real&#32;Time&#32;Clock&#32;-&#32;Combustory.htm">http://combustory.com/wiki/index.php/RTC1307_-_Real_Time_Clock</a>"</div>
+		<div id="catlinks" class="catlinks"><div id="mw-normal-catlinks"><a href="http://combustory.com/wiki/index.php/Special:Categories" title="Special:Categories">Category</a>: <span dir="ltr"><a href="http://combustory.com/wiki/index.php/Category:Electronics" title="Category:Electronics">Electronics</a></span></div></div>		<!-- end content -->
+				<div class="visualClear"></div>
+	</div>
+</div></div>
+<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>Views</h5>
+		<div class="pBody">
+			<ul>
+				 <li id="ca-nstab-main" class="selected"><a href="http://emotorwerks.com/JuiceBox_Public/99%20-%20Supporting%20materials/ICs/RTC/RTC1307&#32;-&#32;Real&#32;Time&#32;Clock&#32;-&#32;Combustory_files/RTC1307&#32;-&#32;Real&#32;Time&#32;Clock&#32;-&#32;Combustory.htm" title="View the content page [alt-c]" accesskey="c">Page</a></li>
+				 <li id="ca-talk"><a href="http://combustory.com/wiki/index.php/Talk:RTC1307_-_Real_Time_Clock" title="Discussion about the content page [alt-t]" accesskey="t">Discussion</a></li>
+				 <li id="ca-viewsource"><a href="http://combustory.com/wiki/index.php?title=RTC1307_-_Real_Time_Clock&action=edit" title="This page is protected.
+You can view its source [alt-e]" accesskey="e">View source</a></li>
+				 <li id="ca-history"><a href="http://combustory.com/wiki/index.php?title=RTC1307_-_Real_Time_Clock&action=history" title="Past revisions of this page [alt-h]" accesskey="h">History</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-personal">
+		<h5>Personal tools</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-login"><a href="http://combustory.com/wiki/index.php?title=Special:UserLogin&returnto=RTC1307_-_Real_Time_Clock" title="You are encouraged to log in; however, it is not mandatory [alt-o]" accesskey="o">Log in</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a style="background-image: url(http://emotorwerks.com/wiki/logo.png);" href="http://combustory.com/wiki/index.php/Main_Page" title="Visit the main page"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+	<div class="generated-sidebar portlet" id="p-navigation">
+		<h5>Navigation</h5>
+		<div class="pBody">
+			<ul>
+				<li id="n-mainpage-description"><a href="http://combustory.com/wiki/index.php/Main_Page" title="Visit the main page [alt-z]" accesskey="z">Main page</a></li>
+				<li id="n-portal"><a href="http://combustory.com/wiki/index.php/Combustory:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li>
+				<li id="n-currentevents"><a href="http://combustory.com/wiki/index.php/Combustory:Current_events" title="Find background information on current events">Current events</a></li>
+				<li id="n-recentchanges"><a href="http://combustory.com/wiki/index.php/Special:RecentChanges" title="The list of recent changes in the wiki [alt-r]" accesskey="r">Recent changes</a></li>
+				<li id="n-randompage"><a href="http://combustory.com/wiki/index.php/Special:Random" title="Load a random page [alt-x]" accesskey="x">Random page</a></li>
+				<li id="n-help"><a href="http://combustory.com/wiki/index.php/Help:Contents" title="The place to find out">Help</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="p-search" class="portlet">
+		<h5><label for="searchInput">Search</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="http://combustory.com/wiki/index.php" id="searchform">
+				<input type="hidden" name="title" value="Special:Search">
+				<input id="searchInput" title="Search Combustory" accesskey="f" type="search" name="search">
+				<input type="submit" name="go" class="searchButton" id="searchGoButton" value="Go" title="Go to a page with this exact name if exists">&nbsp;
+				<input type="submit" name="fulltext" class="searchButton" id="mw-searchButton" value="Search" title="Search the pages for this text">
+			</form>
+		</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5>Toolbox</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="http://combustory.com/wiki/index.php/Special:WhatLinksHere/RTC1307_-_Real_Time_Clock" title="List of all wiki pages that link here [alt-j]" accesskey="j">What links here</a></li>
+				<li id="t-recentchangeslinked"><a href="http://combustory.com/wiki/index.php/Special:RecentChangesLinked/RTC1307_-_Real_Time_Clock" title="Recent changes in pages linked from this page [alt-k]" accesskey="k">Related changes</a></li>
+<li id="t-specialpages"><a href="http://combustory.com/wiki/index.php/Special:SpecialPages" title="List of all special pages [alt-q]" accesskey="q">Special pages</a></li>
+				<li id="t-print"><a href="http://combustory.com/wiki/index.php?title=RTC1307_-_Real_Time_Clock&printable=yes" rel="alternate" title="Printable version of this page [alt-p]" accesskey="p">Printable version</a></li>				<li id="t-permalink"><a href="http://combustory.com/wiki/index.php?title=RTC1307_-_Real_Time_Clock&oldid=771" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-smwbrowselink"><a href="http://combustory.com/wiki/index.php/Special:Browse/RTC1307_-2D_Real_Time_Clock" title="Special:Browse/RTC1307 -2D Real Time Clock">Browse properties</a></li>			</ul>
+		</div>
+	</div>
+<div id="v-g-ads" class="portlet">
+<h5>Sponsers</h5>
+<div class="pBody">
+<!-- Begin: AdBrite, Generated: 2009-10-24 9:32:04  -->
+<script type="text/javascript">
+var AdBrite_Title_Color = '0000FF';
+var AdBrite_Text_Color = '000000';
+var AdBrite_Background_Color = 'FFFFFF';
+var AdBrite_Border_Color = 'CCCCCC';
+var AdBrite_URL_Color = '008000';
+try{var AdBrite_Iframe=window.top!=window.self?2:1;var AdBrite_Referrer=document.referrer==''?document.location:document.referrer;AdBrite_Referrer=encodeURIComponent(AdBrite_Referrer);}catch(e){var AdBrite_Iframe='';var AdBrite_Referrer='';}
+</script>
+<script type="text/javascript">document.write(String.fromCharCode(60,83,67,82,73,80,84));document.write(' src="http://ads.adbrite.com/mb/text_group.php?sid=1390021&zs=3132305f363030&ifr='+AdBrite_Iframe+'&ref='+AdBrite_Referrer+'" type="text/javascript">');document.write(String.fromCharCode(60,47,83,67,82,73,80,84,62));</script><script src="http://ads.adbrite.com/mb/text_group.php?sid=1390021&zs=3132305f363030&ifr=1&ref=http%3A%2F%2Fcombustory.com%2Fwiki%2Findex.php%2FRTC1307_-_Real_Time_Clock" type="text/javascript"></script>
+<div><a target="_top" href="http://www.adbrite.com/mb/commerce/purchase_form.php?opid=1390021&afsid=1" style="font-weight:bold;font-family:Arial;font-size:13px;">Your Ad Here</a></div>
+<!-- End: AdBrite -->
+</div>
+</div>
+
+
+</div><!-- end of the left (by default at least) column -->
+<div class="visualClear"></div>
+<!--/******************JWV Mod for Ads*********************/-->
+              <div style="border: 1px solid #ccc; padding: 1px; margin-top: 25px;">
+  <!-- Begin: AdBrite, Generated: 2009-10-24 14:32:52  -->
+<style type="text/css">
+   .adHeadline {font: bold 10pt Arial; text-decoration: underline; color: #0000FF;}
+   .adText {font: normal 10pt Arial; text-decoration: none; color: #000000;}
+</style>
+<script type="text/javascript">
+try{var AdBrite_Iframe=window.top!=window.self?2:1;var AdBrite_Referrer=document.referrer==''?document.location:document.referrer;AdBrite_Referrer=encodeURIComponent(AdBrite_Referrer);}catch(e){var AdBrite_Iframe='';var AdBrite_Referrer='';}
+document.write(String.fromCharCode(60,83,67,82,73,80,84));document.write(' src="http://ads.adbrite.com/mb/text_group.php?sid=1390281&br=1&col=5&ifr='+AdBrite_Iframe+'&ref='+AdBrite_Referrer+'" type="text/javascript">');document.write(String.fromCharCode(60,47,83,67,82,73,80,84,62));</script><script src="http://ads.adbrite.com/mb/text_group.php?sid=1390281&br=1&col=5&ifr=1&ref=http%3A%2F%2Fcombustory.com%2Fwiki%2Findex.php%2FRTC1307_-_Real_Time_Clock" type="text/javascript"></script>
+<div><a class="adHeadline" target="_top" href="http://www.adbrite.com/mb/commerce/purchase_form.php?opid=1390281&afsid=1">Your Ad Here</a></div>
+<!-- End: AdBrite -->
+</div>
+<!--/******************JWV Mod for Ads*********************/-->
+<div id="footer">
+	<div id="f-poweredbyico">
+		<a href="http://www.mediawiki.org/"><img src="http://emotorwerks.com/JuiceBox_Public/99%20-%20Supporting%20materials/ICs/RTC/RTC1307&#32;-&#32;Real&#32;Time&#32;Clock&#32;-&#32;Combustory_files/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31"></a>
+		<a href="http://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki"><img src="http://emotorwerks.com/JuiceBox_Public/99%20-%20Supporting%20materials/ICs/RTC/RTC1307&#32;-&#32;Real&#32;Time&#32;Clock&#32;-&#32;Combustory_files/smw_button.png" alt="Powered by Semantic MediaWiki" width="88" height="31"></a>
+
+
+	</div>
+	<ul id="f-list">
+		<li id="lastmod"> This page was last modified on 11 May 2012, at 20:54.</li>
+		<li id="viewcount">This page has been accessed 126,903 times.</li>
+		<li id="privacy"><a href="http://combustory.com/wiki/index.php/Combustory:Privacy_policy" title="Combustory:Privacy policy">Privacy policy</a></li>
+		<li id="about"><a href="http://combustory.com/wiki/index.php/Combustory:About" title="Combustory:About">About Combustory</a></li>
+		<li id="disclaimer"><a href="http://combustory.com/wiki/index.php/Combustory:General_disclaimer" title="Combustory:General disclaimer">Disclaimers</a></li>
+	</ul>
+</div>
+</div>
+
+<script src="http://emotorwerks.com/JuiceBox_Public/99%20-%20Supporting%20materials/ICs/RTC/RTC1307&#32;-&#32;Real&#32;Time&#32;Clock&#32;-&#32;Combustory_files/load.php"></script><script src="http://emotorwerks.com/JuiceBox_Public/99%20-%20Supporting%20materials/ICs/RTC/RTC1307&#32;-&#32;Real&#32;Time&#32;Clock&#32;-&#32;Combustory_files/load(1).php"></script>
+<script>if ( window.mediaWiki ) {
+	mediaWiki.config.set({"wgCanonicalNamespace": "", "wgCanonicalSpecialPageName": false, "wgNamespaceNumber": 0, "wgPageName": "RTC1307_-_Real_Time_Clock", "wgTitle": "RTC1307 - Real Time Clock", "wgAction": "view", "wgArticleId": 40, "wgIsArticle": true, "wgUserName": null, "wgUserGroups": ["*"], "wgCurRevisionId": 771, "wgCategories": ["Electronics"], "wgBreakFrames": false, "wgRestrictionEdit": [], "wgRestrictionMove": []});
+}
+</script>
+<script>if ( window.mediaWiki ) {
+	mediaWiki.loader.load(["mediawiki.util", "mediawiki.legacy.wikibits", "mediawiki.legacy.ajax"]);
+	mediaWiki.loader.go();
+}
+</script><script type="text/javascript" src="http://emotorwerks.com/JuiceBox_Public/99%20-%20Supporting%20materials/ICs/RTC/RTC1307&#32;-&#32;Real&#32;Time&#32;Clock&#32;-&#32;Combustory_files/load(2).php"></script>
+
+<script>if ( window.mediaWiki ) {
+	mediaWiki.user.options.set({"ccmeonemails":0,"cols":80,"contextchars":50,"contextlines":5,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"monobook","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":0,
+	"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"riched_use_toggle":1,"riched_start_disabled":1,"riched_use_popup":1,"riched_toggle_remember_state":1,"variant":"en","language":"en","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs102":false,"searchNs103":false,"searchNs108":false,"searchNs109":false});;mediaWiki.loader.state({"user.options":"ready"});
+}
+</script><script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script src="http://emotorwerks.com/JuiceBox_Public/99%20-%20Supporting%20materials/ICs/RTC/RTC1307&#32;-&#32;Real&#32;Time&#32;Clock&#32;-&#32;Combustory_files/ga.js" type="text/javascript"></script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-23781522-1");
+pageTracker._trackPageview();
+</script><!-- Served in 0.784 secs. --></body></html>
